@@ -1,78 +1,47 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+#txt {
+    padding: 10px;
+    padding-left: 12px;
+    font-family: 'Source Code Pro', monospace;
+    color: limegreen;
+}
 
 @-webkit-keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 @-moz-keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 @keyframes AnimationName {
-    0%{background-position:0% 49%}
-    50%{background-position:100% 52%}
-    100%{background-position:0% 49%}
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-
-body {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-}
-
-h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
-    font-size: 48px;
-    letter-spacing: .04em;
-    color: black;
-    text-align: center;
-}
-
 a {
-    color: white;
+    color: limegreen;
     text-decoration: none;
 }
-
-a:hover {
-    text-decoration: underline;
-}
-
-#cool {
-    background: linear-gradient(75deg, #ed1945, #433dbf);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 41s ease infinite;
-    -moz-animation: AnimationName 41s ease infinite;
-    animation: AnimationName 41s ease infinite;   
-}
-
-#home {
-    background: linear-gradient(45deg, #04f208, #FFA07A, #07e6f2);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 41s ease infinite;
-    -moz-animation: AnimationName 41s ease infinite;
-    animation: AnimationName 41s ease infinite;   
-}
-
-#media {
-    background: linear-gradient(45deg, #ff7272, #4cadd3, #0845a0);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 41s ease infinite;
-    -moz-animation: AnimationName 41s ease infinite;
-    animation: AnimationName 41s ease infinite;   
+.moving-grad {
+    background: linear-gradient(130deg, #000000, #4a4848);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 42s ease infinite;
+    -moz-animation: AnimationName 42s ease infinite;
+    animation: AnimationName 42s ease infinite;
 }
 
 #rcorners {
-    margin: 0 auto;
     border-radius: 25px;
-    border: 2px solid black;
-    position: relative;
-    top: 50%;
-    padding: 20px;
+    background-color: black;
+    border: 6px solid silver;
     width: 600px;
-    height: 250px;
+    height: 400px;
+}
+
+.absolute-center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
 }
