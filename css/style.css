@@ -45,3 +45,15 @@ a {
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
