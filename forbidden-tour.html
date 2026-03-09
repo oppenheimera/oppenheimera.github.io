@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>Forbidden Tour</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            gmp-map-3d {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <gmp-map-3d
+            center="48.514228226984,-121.08742664739242,2087.83591064112"
+            range="13000"
+            tilt="50"
+            heading="2.3"
+            mode="SATELLITE">
+            <gmp-marker-3d position="48.49279, -121.1219,50" extruded="true" label="Start/End"></gmp-marker-3d>
+            <gmp-marker-3d position="48.48776, -121.06150,50" extruded="true" label="Camp (Night 1)"></gmp-marker-3d>
+            <gmp-marker-3d position="48.51707, -121.04733,50" extruded="true" label="Camp (Night 1 - Alt.)"></gmp-marker-3d>
+            <gmp-marker-3d position="48.54284, -121.10842,50" extruded="true" label="Camp (Night 2)"></gmp-marker-3d>
+            <gmp-marker-3d position="48.52713, -121.07789,50" extruded="true" label="Camp (Night 2 - Alt.)"></gmp-marker-3d>
+            <gmp-marker-3d position="48.53012, -121.12713,50" extruded="true" label="Eldorado Glacier camp (option)"></gmp-marker-3d>
+            <gmp-marker-3d position="48.51160, -121.05848,50" extruded="true" label="Forbidden Peak"></gmp-marker-3d>
+            <gmp-marker-3d position="48.53754, -121.13429,50" extruded="true" label="Eldorado Summit"></gmp-marker-3d>
+            <gmp-marker-3d position="48.55430, -121.10445,50" extruded="true" label="Klawatti Peak"></gmp-marker-3d>
+            
+            
+            
+        </gmp-map-3d>
+
+        <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyA6myHzS10YXdcazAFalmXvDkrYCp5cLc8", v: "beta",});</script>
+
+        <script type="module">
+            const { AltitudeMode, Polyline3DElement } =
+                await google.maps.importLibrary('maps3d');
+
+                const forbidden_tour = new Polyline3DElement({
+                    path: [
+                            { "lat": 48.49279, "lng": -121.1219 },
+                            { "lat": 48.489559, "lng": -121.090156 },
+                            { "lat": 48.484302, "lng": -121.079046 },
+                            { "lat": 48.486455, "lng": -121.071352 },
+                            { "lat": 48.487508, "lng": -121.063052 },
+                            { "lat": 48.489793, "lng": -121.057596 },
+                            { "lat": 48.493553, "lng": -121.052336 },
+                            { "lat": 48.501373, "lng": -121.045107 },
+                            { "lat": 48.507492, "lng": -121.041917 },
+                            { "lat": 48.516623, "lng": -121.047109 },
+                            { "lat": 48.520917, "lng": -121.050065 },
+                            { "lat": 48.521497, "lng": -121.06009 },
+                            { "lat": 48.526185, "lng": -121.077779 },
+                            { "lat": 48.527032, "lng": -121.087565 },
+                            { "lat": 48.529062, "lng": -121.097431 },
+                            { "lat": 48.533066, "lng": -121.102925 },
+                            { "lat": 48.535913, "lng": -121.098215 },
+                            { "lat": 48.540198, "lng": -121.105613 },
+                            { "lat": 48.540478, "lng": -121.114284 },
+                            { "lat": 48.53763, "lng": -121.119884 },
+                            { "lat": 48.530503, "lng": -121.124395 },
+                            { "lat": 48.528617, "lng": -121.127036 },
+                            { "lat": 48.518145, "lng": -121.124044 },
+                            { "lat": 48.515893, "lng": -121.117124 },
+                            { "lat": 48.50936, "lng": -121.116987 },
+                            { "lat": 48.503482, "lng": -121.11799 },
+                            { "lat": 48.49279, "lng": -121.1219 }
+                    ],
+                    strokeColor: 'red',
+                    outerColor: 'white',
+                    strokeWidth: 5,
+                });
+                const eldo_summit = new Polyline3DElement({
+                    path: [
+                        { "lat": 48.535599, "lng": -121.121773 },
+                        { "lat": 48.535772, "lng": -121.123797 },
+                        { "lat": 48.536847, "lng": -121.128373 },
+                        { "lat": 48.537743, "lng": -121.13352 },
+                        { "lat": 48.538972, "lng": -121.131386 },
+                        { "lat": 48.540334, "lng": -121.124712 },
+                        { "lat": 48.540596, "lng": -121.122742 },
+                        { "lat": 48.535599, "lng": -121.121773 }
+                    ],
+                    strokeColor: 'green',
+                    outerColor: 'white',
+                    strokeWidth: 5,
+                });
+                const klawatti_loop = new Polyline3DElement({
+                    path: [
+                        { "lat": 48.543551, "lng": -121.109456 },
+                        { "lat": 48.542236, "lng": -121.11484 },
+                        { "lat": 48.545574, "lng": -121.117533 },
+                        { "lat": 48.552487, "lng": -121.109563 },
+                        { "lat": 48.555077, "lng": -121.108245 },
+                        { "lat": 48.558897, "lng": -121.104766 },
+                        { "lat": 48.559301, "lng": -121.102985 },
+                        { "lat": 48.554096, "lng": -121.099927 },
+                        { "lat": 48.551827, "lng": -121.100913 },
+                        { "lat": 48.549259, "lng": -121.104492 },
+                        { "lat": 48.547674, "lng": -121.106661 },
+                        { "lat": 48.543551, "lng": -121.109456 }
+                        ],
+                    strokeColor: 'blue',
+                    outerColor: 'white',
+                    strokeWidth: 5,
+                });
+
+                
+
+            document.querySelector('gmp-map-3d').append(forbidden_tour);
+            document.querySelector('gmp-map-3d').append(eldo_summit);
+            document.querySelector('gmp-map-3d').append(klawatti_loop);
+        </script>
+    </body>
+</html>
